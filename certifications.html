@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>All Certifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+        /* Light theme (default) */
+        .bg-main { background-color: #ffffff; }
+        .text-main { color: #1f2937; }
+        .card { background-color: #f9f9f9; border: 1px solid #e5e7eb; }
+        .text-secondary { color: #6b7280; }
+        .back-link { color: #0f172a; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Dark theme overrides */
+        .dark .bg-main { background-color: #121212; }
+        .dark .text-main { color: #e5e7eb; }
+        .dark .card { background-color: #1a1a1a; border-color: #2d2d2d; }
+        .dark .text-secondary { color: #9ca3af; }
+        .dark .back-link { color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-main text-main transition-colors duration-300 min-h-screen">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center text-sm back-link mb-6">
+            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+            Back to Home
+        </a>
+
+        <h1 class="text-2xl font-semibold mb-8">All Certifications</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card rounded-lg p-4">
+                <h3 class="font-semibold">AWS Certified Cloud Practitioner</h3>
+                <p class="text-secondary text-sm">Amazon Web Services</p>
+            </div>
+            <div class="card rounded-lg p-4">
+                <h3 class="font-semibold">Oracle Certified Generative AI Professional</h3>
+                <p class="text-secondary text-sm">Oracle</p>
+            </div>
+            <div class="card rounded-lg p-4">
+                <h3 class="font-semibold">Google Certified Cybersecurity</h3>
+                <p class="text-secondary text-sm">Google</p>
+            </div>
+            
+            <div class="card rounded-lg p-4">
+                <h3 class="font-semibold">JavaScript</h3>
+                <p class="text-secondary text-sm">TestDome</p>
+            </div>
+            <div class="card rounded-lg p-4">
+                <h3 class="font-semibold">PHP</h3>
+                <p class="text-secondary text-sm">TestDome</p>
+            </div>
+            
+          
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        (function() {
+            const html = document.documentElement;
+            function applyThemeFromStorage() {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+            applyThemeFromStorage();
+            window.addEventListener('storage', (e) => {
+                if (e.key === 'theme') applyThemeFromStorage();
+            });
+        })();
+    </script>
+</body>
+</html>

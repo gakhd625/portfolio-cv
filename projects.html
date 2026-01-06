@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>All Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+        /* Light theme (default) */
+        .bg-main { background-color: #ffffff; }
+        .text-main { color: #1f2937; }
+        .bg-card { background-color: #f9f9f9; }
+        .text-secondary { color: #6b7280; }
+        .border-card { border-color: #e5e7eb; }
+        .card { background: var(--card-bg, #f9f9f9); border: 1px solid rgba(0,0,0,0.04); }
+    .pill { background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); color: #1f2937; }
+
+    /* Back link color: dark in light mode, pale in dark mode */
+    .back-link { color: #0f172a; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    /* Dark theme overrides */
+        .dark .bg-main { background-color: #121212; }
+        .dark .text-main { color: #e5e7eb; }
+        .dark .bg-card { background-color: #1a1a1a; }
+        .dark .text-secondary { color: #9ca3af; }
+        .dark .border-card { border-color: #2d2d2d; }
+        .dark .card { background: #0b0b0b; border: 1px solid rgba(255,255,255,0.06); }
+    .dark .pill { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); color: #e6e6e6; }
+    .dark .back-link { color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-main text-main transition-colors duration-300 min-h-screen">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center text-sm back-link mb-6">
+            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+            Back to Home
+        </a>
+
+        <h1 class="text-2xl font-semibold mb-8">All Projects</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">CodeCred</h2>
+                <p class="text-gray-400 text-sm mt-2">Online certifications for programmers</p>
+                <a href="https://codecred.dev" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">codecred.dev</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">BASE404</h2>
+                <p class="text-gray-400 text-sm mt-2">Online coding bootcamp</p>
+                <a href="https://base-404.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">base-404.com</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">DYNAMIS Workout Tracker</h2>
+                <p class="text-gray-400 text-sm mt-2">AI-powered workout tracker</p>
+                <a href="https://dynamis-app.online" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">dynamis-app.online</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">DIIN.PH</h2>
+                <p class="text-gray-400 text-sm mt-2">AI-powered wardrobe assistant</p>
+                <a href="https://diin.ph" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">diin.ph</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Resume Builder</h2>
+                <p class="text-gray-400 text-sm mt-2">Harvard style and ATS-friendly resume builder</p>
+                <a href="https://resume-builder.brylDaga-as.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">resume-builder.brylDaga-as.com</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Capstone Generator</h2>
+                <p class="text-gray-400 text-sm mt-2">Online capstone generator for IT/CS students</p>
+                <a href="https://capstone-generator.brylDaga-as.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">capstone-generator.brylDaga-as.com</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm col-span-1 sm:col-span-2 lg:col-span-3">
+                <h2 class="font-semibold text-lg">BOOQED</h2>
+                <p class="text-gray-400 text-sm mt-2">Leading workspace booking platform based in Singapore</p>
+                <a href="https://booqed.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">booqed.com</a>
+            </article>
+        </div>
+
+        <hr class="border-gray-800 my-10">
+
+        <footer class="text-center text-gray-500 text-sm">&copy; 2025 Gerlie Daga-as. All rights reserved.</footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
+
+    <script>
+        // Theme sync: mirror the logic from index.html so this page follows the same theme toggle.
+        (function() {
+            const html = document.documentElement;
+
+            function applyThemeFromStorage() {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+
+            // Apply on load
+            applyThemeFromStorage();
+
+            // Listen for changes made in other tabs/windows
+            window.addEventListener('storage', (e) => {
+                if (e.key === 'theme') applyThemeFromStorage();
+            });
+        })();
+    </script>
+</body>
+</html>
