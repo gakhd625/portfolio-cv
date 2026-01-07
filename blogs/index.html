@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>My Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+        /* Light theme (default) */
+        .bg-main { background-color: #ffffff; }
+        .text-main { color: #1f2937; }
+        .bg-card { background-color: #f9f9f9; }
+        .text-secondary { color: #6b7280; }
+        .border-card { border-color: #e5e7eb; }
+        .card { background: var(--card-bg, #f9f9f9); border: 1px solid rgba(0,0,0,0.04); }
+    .pill { background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); color: #1f2937; }
+
+    /* Back link color: dark in light mode, pale in dark mode */
+    .back-link { color: #0f172a; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    /* Dark theme overrides */
+        .dark .bg-main { background-color: #121212; }
+        .dark .text-main { color: #e5e7eb; }
+        .dark .bg-card { background-color: #1a1a1a; }
+        .dark .text-secondary { color: #9ca3af; }
+        .dark .border-card { border-color: #2d2d2d; }
+        .dark .card { background: #0b0b0b; border: 1px solid rgba(255,255,255,0.06); }
+    .dark .pill { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); color: #e6e6e6; }
+    .dark .back-link { color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-main text-main transition-colors duration-300 min-h-screen">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <a href="../" class="inline-flex items-center text-sm back-link mb-6">
+            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+            Back to Home
+        </a>
+
+        <h1 class="text-2xl font-semibold mb-8">My Blogs</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Building a Serverless Image Processing Pipeline with AWS Lambda, S3, and API Gateway</h2>
+                <p class="text-gray-400 text-sm mt-2">In this blog, we’ll explore how to build a serverless image processing pipeline using AWS Lambda, Amazon S3, and API Gateway. </p>
+                <a href="https://dev.to/kaths3cdev/building-a-serverless-image-processing-pipeline-with-aws-lambda-s3-and-api-gateway-32od" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">Read more</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Practical Cloud Security Wins for New AWS Teams</h2>
+                <p class="text-gray-400 text-sm mt-2">What if cloud security didn’t have to feel overwhelming? You don’t need a huge budget, a full security team, or a complicated architecture to feel confident about your AWS setup. </p>
+                <a href="https://dev.to/kaths3cdev/practical-cloud-security-wins-for-new-aws-teams-even-if-youre-just-getting-started-1cbi" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">Read more</a>
+            </article>
+
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Mastering Cloud Security: A Strategic Guide to Securing Your AWS Environment</h2>
+                <p class="text-gray-400 text-sm mt-2">In today’s digital landscape, a single security breach can be catastrophic leading to data loss, financial impact, and reputational damage.</p>
+                <a href="https://dev.to/kaths3cdev/mastering-cloud-security-a-strategic-guide-to-securing-your-aws-environment-51bo" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">Read more</a>
+            </article>
+            <article class="card p-6 rounded-lg shadow-sm">
+                <h2 class="font-semibold text-lg">Breaking Free from "Click-Ops" with Terraform</h2>
+                <p class="text-gray-400 text-sm mt-2">Eliminating Configuration Drift: Manual setups lead to "it works in Dev but not in Prod." Terraform ensures every environment is an exact replica of the code.</p>
+                <a href="https://dev.to/kaths3cdev/exploring-serverless-architectures-with-aws-lambda-and-api-gateway-4k5e" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">Read more</a>
+            </article>
+        </div>
+
+        <hr class="border-gray-800 my-10">
+
+        <footer class="text-center text-gray-500 text-sm">&copy; 2025 Gerlie Daga-as. All rights reserved.</footer>
+    </div>
+
+    <script>lucide.createIcons();</script>
+
+    <script>
+        // Theme sync logic
+        (function() {
+            const html = document.documentElement;
+            function applyThemeFromStorage() {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+        applyThemeFromStorage();
+            window.addEventListener('storage', (e) => {
+                if (e.key === 'theme') applyThemeFromStorage();
+            });
+        })();
+    </script>
+</body>
+</html>
