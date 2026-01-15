@@ -35,55 +35,210 @@
 </head>
 <body class="bg-main text-main transition-colors duration-300 min-h-screen">
     <div class="max-w-6xl mx-auto px-6 py-12">
-        <a href="../" class="inline-flex items-center text-sm back-link mb-6">
+        <a href="../" class="inline-flex items-center text-sm back-link mb-10 text-secondary hover:text-main transition-colors">
             <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
-            Back to Home
+            Back
         </a>
 
-        <h1 class="text-2xl font-semibold mb-8">All Projects</h1>
+        <h1 class="text-4xl font-bold mb-12">All Projects</h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">RouteWise</h2>
-                <p class="text-gray-400 text-sm mt-2">Mobile Jeepney Route Guide for Cebu Commuters</p>
-                <a href="https://routewise-teal.vercel.app" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">routewise.dev</a>
-            </article>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="text-sm border-b border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400">
+                        <th class="py-4 pr-4 font-medium align-top w-24">Year</th>
+                        <th class="py-4 pr-4 font-medium align-top">Project</th>
+                        <th class="py-4 pr-4 font-medium align-top hidden md:table-cell w-1/4">Built with</th>
+                        <th class="py-4 font-medium align-top w-24">Link</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                    <!-- Resume Builder -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2026</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">Resume Builder</div>
+                            <div class="text-secondary leading-relaxed">Harvard style and ATS-friendly resume builder</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">TypeScript</span>
+                                <span class="pill px-2 py-1 rounded text-xs">NextJS</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://resume-builder-liard-nine-41.vercel.app/" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- RouteWise -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2025</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">RouteWise</div>
+                            <div class="text-secondary leading-relaxed">Mobile Jeepney Route Guide for Cebu Commuters</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">Mobile</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Mapbox</span>
+                                <span class="pill px-2 py-1 rounded text-xs">React Native</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Expo</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://routewise-teal.vercel.app" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Expfin -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2025</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">Expfin</div>
+                            <div class="text-secondary leading-relaxed">Expense and Finance Tracker</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">Flutter</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Supabase</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Android Studio</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://safeplay.dev" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                        </td>
+                    </tr>
 
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">SafePlay</h2>
-                <p class="text-gray-400 text-sm mt-2">AI Powered Safety Platform</p>
-                <a href="https://safeplay.dev" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">safeplay.dev</a>
-            </article>
+                    <!-- SafePlay -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2025</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">SafePlay</div>
+                            <div class="text-secondary leading-relaxed">AI-powered Chrome Extension that protects children in online games by monitoring real-time chat to detect grooming, cyberbullying, and emotional abuse.</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">AI</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Gemeni</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Javascript</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://safeplay.dev" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                        </td>
+                    </tr>
 
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">PicJourni</h2>
-                <p class="text-gray-400 text-sm mt-2">Travel Journaling App</p>
-                <a href="https://pic-journi.vercel.app/" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">picjourni.com</a>
-            </article>
+                    <!-- PicJourni -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2024</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">PicJourni</div>
+                            <div class="text-secondary leading-relaxed">Travel Journaling App</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">NextJS</span>
+                                <span class="pill px-2 py-1 rounded text-xs">TypeScript</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Firebase</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://pic-journi.vercel.app/" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </div>
+                        </td>
+                    </tr>
 
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">PN Management System</h2>
-                <p class="text-gray-400 text-sm mt-2">A web-based accounting and dashboard system for Passerelles Numériques Philippines</p>
-                <!-- <a href="https://diin.ph" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">diin.ph</a> -->
-            </article>
+                    <!-- PN Management System -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2024</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">PN Management System</div>
+                            <div class="text-secondary leading-relaxed">A web-based accounting and dashboard system for Passerelles Numériques Philippines</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">PHP</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Laravel</span>
+                                <span class="pill px-2 py-1 rounded text-xs">MySQL</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </td>
+                    </tr>
+                    
+                    <!-- Capstone Generator -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2023</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">SaApp</div>
+                            <div class="text-secondary leading-relaxed">A web application that generates capstone project ideas for students based on their interests and skills.</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">HTML</span>
+                                <span class="pill px-2 py-1 rounded text-xs">CSS</span>
+                                <span class="pill px-2 py-1 rounded text-xs">JavaScript</span>
+                                <span class="pill px-2 py-1 rounded text-xs">PHP</span>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://capstone-generator.brylDaga-as.com" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
 
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">Resume Builder</h2>
-                <p class="text-gray-400 text-sm mt-2">Harvard style and ATS-friendly resume builder</p>
-                <a href="https://resume-builder-liard-nine-41.vercel.app/" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">resume-builder-liard-nine-41.vercel.app/</a>
-            </article>
-            
-            <article class="card p-6 rounded-lg shadow-sm">
-                <h2 class="font-semibold text-lg">Capstone Generator</h2>
-                <p class="text-gray-400 text-sm mt-2">Online capstone generator for IT/CS students</p>
-                <a href="https://capstone-generator.brylDaga-as.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">capstone-generator.brylDaga-as.com</a>
-            </article>
+                    <!-- BOOQED -->
+                    <tr class="group hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="py-6 pr-4 align-top text-gray-500 dark:text-gray-400">2023</td>
+                        <td class="py-6 pr-4 align-top">
+                            <div class="font-semibold text-main mb-1">Library System</div>
+                            <div class="text-secondary leading-relaxed">Console-Based Library Management System</div>
+                        </td>
+                        <td class="py-6 pr-4 align-top hidden md:table-cell">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="pill px-2 py-1 rounded text-xs">C</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Visual Studio</span>
+                                <span class="pill px-2 py-1 rounded text-xs">Console-Based</span>
 
-            <article class="card p-6 rounded-lg shadow-sm col-span-1 sm:col-span-2 lg:col-span-3">
-                <h2 class="font-semibold text-lg">BOOQED</h2>
-                <p class="text-gray-400 text-sm mt-2">Leading workspace booking platform based in Singapore</p>
-                <a href="https://booqed.com" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full pill">booqed.com</a>
-            </article>
+                            </div>
+                        </td>
+                        <td class="py-6 align-top">
+                            <div class="flex items-center gap-3">
+                                <a href="https://booqed.com" target="_blank" rel="noopener" class="text-secondary hover:text-main transition-colors" title="Visit Website">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <hr class="border-gray-800 my-10">
